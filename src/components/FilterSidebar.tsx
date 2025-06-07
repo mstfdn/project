@@ -36,13 +36,13 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
       <Box display="flex" alignItems="center" mb={3}>
         <TuneOutlined sx={{ mr: 1, color: 'primary.main' }} />
         <Typography variant="h6" fontWeight={600}>
-          Filtreler
+          Filters
         </Typography>
       </Box>
 
       <Box mb={3}>
         <Typography variant="subtitle2" fontWeight={600} mb={2}>
-          Özellikler
+          Features
         </Typography>
         <FormControlLabel
           control={
@@ -52,7 +52,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
               color="primary"
             />
           }
-          label="Yol üzerinde kullanılabilir"
+          label="Usable on Road"
           sx={{ mb: 1 }}
         />
         <FormControlLabel
@@ -63,7 +63,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
               color="primary"
             />
           }
-          label="Ağır atık kabul eder"
+          label="Accepts Heavy Waste"
         />
       </Box>
 
@@ -71,7 +71,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
 
       <Box mb={3}>
         <Typography variant="subtitle2" fontWeight={600} mb={2}>
-          Fiyat Aralığı (₺)
+          Price Range (£)
         </Typography>
         <Box px={1}>
           <Slider
@@ -81,12 +81,12 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
             max={1500}
             step={50}
             valueLabelDisplay="auto"
-            valueLabelFormat={(value) => `₺${value}`}
+            valueLabelFormat={(value) => `£${value}`}
             sx={{ color: 'primary.main' }}
           />
         </Box>
         <Typography variant="body2" color="text.secondary" textAlign="center" mt={1}>
-          Maksimum: ₺{filters.maxPrice}
+          Maximum: £{filters.maxPrice}
         </Typography>
       </Box>
 
@@ -94,7 +94,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
 
       <Box>
         <Typography variant="subtitle2" fontWeight={600} mb={2}>
-          Skip Boyutu (Yard)
+          Skip Size (Yard)
         </Typography>
         <Box px={1}>
           <Slider

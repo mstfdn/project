@@ -14,7 +14,6 @@ import {
   Scale,
   Schedule,
   CheckCircle,
-  Cancel
 } from '@mui/icons-material';
 import { SkipCardProps } from '../types/Skip';
 
@@ -63,7 +62,7 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
                 {skip.size} Yard
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
-                Skip Konteyner
+                Skip Container
               </Typography>
             </Box>
             {isSelected && (
@@ -79,10 +78,10 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
 
           <Box mb={3}>
             <Typography variant="h5" component="div" fontWeight={600} color="text.primary">
-              ₺{totalPrice.toFixed(2)}
+              £{totalPrice.toFixed(2)}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              KDV dahil toplam fiyat
+              Total price including VAT
             </Typography>
           </Box>
 
@@ -90,21 +89,21 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
             <Box display="flex" alignItems="center" gap={1}>
               <Schedule sx={{ fontSize: 18, color: 'text.secondary' }} />
               <Typography variant="body2">
-                {skip.hire_period_days} gün kiralama süresi
+                {skip.hire_period_days} days rental period
               </Typography>
             </Box>
             
             <Box display="flex" alignItems="center" gap={1}>
               <LocalShipping sx={{ fontSize: 18, color: skip.allowed_on_road ? 'success.main' : 'error.main' }} />
               <Typography variant="body2">
-                Yol üzerinde: {skip.allowed_on_road ? 'İzinli' : 'İzinsiz'}
+                On the road: {skip.allowed_on_road ? 'Permitted' : 'Not Permitted'}
               </Typography>
             </Box>
             
             <Box display="flex" alignItems="center" gap={1}>
               <Scale sx={{ fontSize: 18, color: skip.allows_heavy_waste ? 'success.main' : 'error.main' }} />
               <Typography variant="body2">
-                Ağır atık: {skip.allows_heavy_waste ? 'Kabul ediyor' : 'Kabul etmiyor'}
+                Heavy waste: {skip.allows_heavy_waste ? 'Accepted' : 'Not Accepted'}
               </Typography>
             </Box>
           </Box>
@@ -120,13 +119,13 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
               }}
             />
             <Chip
-              label={`${skip.hire_period_days} Gün`}
+              label={`${skip.hire_period_days} Days`}
               size="small"
               variant="outlined"
             />
             {skip.transport_cost && (
               <Chip
-                label="Taşıma Dahil"
+                label="Transport Included"
                 size="small"
                 color="info"
                 variant="outlined"
@@ -153,7 +152,7 @@ const SkipCard: React.FC<SkipCardProps> = ({ skip, isSelected, onSelect }) => {
               })
             }}
           >
-            {isSelected ? 'Seçildi' : 'Bu Skip\'i Seç'}
+            {isSelected ? 'Selected' : 'Select This Skip'}
           </Button>
         </CardContent>
       </Card>

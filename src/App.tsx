@@ -107,7 +107,7 @@ function App() {
 
   const handleContinue = () => {
     if (selectedSkip) {
-      alert(`${selectedSkip.size} Yard skip seçildi! Sonraki adıma geçiliyor...`);
+      alert(`${selectedSkip.size} Yard skip selected! Proceeding to next step...`);
     }
   };
 
@@ -144,14 +144,14 @@ function App() {
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  Skip Boyutunuzu Seçin
+                  Choose Your Skip Size
                 </Typography>
                 <Typography 
                   variant="h6" 
                   color="text.secondary"
                   sx={{ maxWidth: 600, mx: 'auto' }}
                 >
-                  İhtiyacınıza en uygun skip boyutunu seçin ve hemen kiralama işlemini başlatın
+                  Select the most suitable skip size for your needs and start the rental process immediately
                 </Typography>
               </Box>
             </Fade>
@@ -169,7 +169,7 @@ function App() {
                           onClick={handleResetFilters}
                           sx={{ textTransform: 'none' }}
                         >
-                          Filtreleri Temizle
+                          Clear Filters
                         </Button>
                       </Box>
                     </Box>
@@ -180,10 +180,10 @@ function App() {
               <Grid item xs={12} md={isMobile ? 12 : 9}>
                 <Box mb={3}>
                   <Typography variant="body1" color="text.secondary">
-                    {filteredSkips.length} skip bulundu
+                    {filteredSkips.length} skip found
                     {selectedSkip && (
-                      <Typography component="span\" color="primary.main\" fontWeight={600}>
-                        {' • '}{selectedSkip.size} Yard skip seçildi
+                      <Typography component="span" color="primary.main" fontWeight={600}>
+                        {' • '}{selectedSkip.size} Yard skip selected
                       </Typography>
                     )}
                   </Typography>
@@ -217,14 +217,14 @@ function App() {
                       }}
                     >
                       <Typography variant="h6" color="text.secondary" mb={2}>
-                        Filtre kriterlerinize uygun skip bulunamadı
+                        No skips found matching your filter criteria
                       </Typography>
                       <Button
                         variant="outlined"
                         onClick={handleResetFilters}
                         sx={{ textTransform: 'none' }}
                       >
-                        Filtreleri Temizle
+                        Clear Filters
                       </Button>
                     </Box>
                   </Fade>
@@ -262,7 +262,7 @@ function App() {
                       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                     }}
                   >
-                    Devam Et →
+                    Continue →
                   </Button>
                 </Box>
               </Fade>

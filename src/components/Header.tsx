@@ -51,7 +51,7 @@ const Header: React.FC = () => {
                   letterSpacing: '-0.02em'
                 }}
               >
-                Skip Kiralama
+                Skip Rental
               </Typography>
               <Typography 
                 variant="body2" 
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                   mt: 0.5
                 }}
               >
-                En uygun skip'i seçin ve hemen kiralayın
+                Choose the most suitable skip and rent immediately
               </Typography>
             </Box>
           </Box>

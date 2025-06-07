@@ -21,11 +21,11 @@ interface ProgressStepperProps {
 }
 
 const steps = [
-  { label: 'Konum', icon: <LocationOn /> },
-  { label: 'Skip Seçimi', icon: <DeleteOutline /> },
-  { label: 'Tarih Seçimi', icon: <DateRange /> },
-  { label: 'Ödeme', icon: <Payment /> },
-  { label: 'Tamamlandı', icon: <CheckCircle /> }
+  { label: 'Location', icon: <LocationOn /> },
+  { label: 'Skip Selection', icon: <DeleteOutline /> },
+  { label: 'Date Selection', icon: <DateRange /> },
+  { label: 'Payment', icon: <Payment /> },
+  { label: 'Completed', icon: <CheckCircle /> }
 ];
 
 const ProgressStepper: React.FC<ProgressStepperProps> = ({ activeStep }) => {
